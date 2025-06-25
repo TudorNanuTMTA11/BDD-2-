@@ -1,0 +1,18 @@
+from selenium.webdriver.common.by import By
+class Selectors_List:
+    FIRST_NAME = (By.ID, "firstname")
+    LAST_NAME = (By.ID, "lastname")
+    EMAIL = (By.ID, "email_address")
+    PASSWORD = (By.ID, "password")
+    PASSWORD_CONFIRMATION = (By.ID, "password_confirmation")
+    CREATE_AN_ACCOUNT_BTN = (By.XPATH, "//button[@class= 'action submit primary']")
+    CREATE_AN_ACCOUNT_OPT = (By.XPATH, ['/html[1]/body[1]/div[2]/header[1]/div[1]/div[1]/ul[1]/li[3]/a[1'])
+    SIGN_IN_BTN = (By.ID, "send2")
+    SIGN_IN_OPT = (By.XPATH, "/html[1]/body[1]/div[2]/main[1]/div[3]/div[1]/div[2]/div[1]/div[2]/form[1]/fieldset[1]/div[4]/div[1]/button[1]")
+    FORGET_YOUR_PASSWORD_BTN = (By.XPATH, "/html[1]/body[1]/div[2]/main[1]/div[3]/div[1]/div[2]/div[1]/div[2]/form[1]/fieldset[1]/div[4]/div[2]/a[1]/span[1]")
+    EMAIL_ERROR = (By.ID, 'email-error')
+    PASSWORD_ERROR = (By.ID, 'pass-error')
+    RESET_MY_PASSWORD_BTN = (By.XPATH, "//button[@class= 'action submit primary']")
+    CONFIRMATION_MESSAGE = (By.XPATH, '/html[1]/body[1]/div[2]/main[1]/div[2]/div[2]/div[1]/div[1]/div[1]')
+    SEARCH_ENTIRE_HERE = (By.XPATH,'//input[@id = "search"]')
+    WAYFARER_MESSENGER_BAG = (By.XPATH,'/html/body/div[2]/header/div[2]/div[2]/div[2]/form/div[1]/div/div[1]/ul/li[1]/span[1]')
