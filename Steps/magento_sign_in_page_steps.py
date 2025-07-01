@@ -12,9 +12,13 @@ def step_impl(context):
 def step_impl(context):
     context.sign_in_page.sign_in_button()
 
-@then('I receive the message "This is a required field"')
-def step_impl(context,email):
-    context.sign_in_page.forget_inserting_email_error(email)
+@then('I receive the error "This is a required field" for not inserting credentials')
+def step_impl(context):
+    context.sign_in_page.forget_inserting_email_error()
+
+@then('I receive the error: "This is a required field" for not inserting password')
+def step_impl(context):
+    context.sign_in_page.forget_inserting_password_error()
 
 
 @when('I click the button "Forgot your Password?"')
