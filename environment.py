@@ -1,8 +1,10 @@
+from Pages.what_is_new import What_is_new
 from browser import Browser
 from base_page import Base_page
 from Pages.create_account import Create_account
 from Pages.home_page import Home_page
 from Pages.sign_in_page import Sign_in_page
+from Pages.checkout import Checkout
 
 def before_all(context):
     context.browser = Browser()
@@ -11,6 +13,8 @@ def before_all(context):
     context.create_account = Create_account()
     context.home_page = Home_page()
     context.sign_in_page = Sign_in_page()
+    context.what_is_new = What_is_new()
+    context.checkout = Checkout()
 
 def after_all(context):
     context.browser.close_browser()
