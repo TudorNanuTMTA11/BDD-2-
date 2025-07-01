@@ -4,27 +4,31 @@ from behave import *
 def step_impl(context):
     context.home_page.open_home_page()
 
+@when('I click "Consent" on incognito window')
+def step_impl(context):
+    context.home_page.click_consent_button()
+
 @when('I click "Create an Account" option')
 def step_impl(context):
     context.home_page.create_account_page()
 
-@when('I introduce the first name "Tudor"')
+@when('I introduce the first name "{first_name}"')
 def step_impl(context,first_name):
     context.create_account.the_first_name_is_inserted(first_name)
 
-@when('I introduce the last name "Nanu"')
+@when('I introduce the last name "{last_name}"')
 def step_impl(context,last_name):
     context.create_account.the_last_name_is_inserted(last_name)
 
-@when('I introduce the email "tudor.nanu10@gmail.com"')
+@when('I introduce the email "{email}"')
 def step_impl(context, email):
     context.create_account.the_email_is_inserted(email)
 
-@when('I introduce the password "Universitate10!"')
+@when('I introduce the password "{password}"')
 def step_impl(context, password):
     context.create_account.the_password_is_inserted(password)
 
-@when('I confirm the password "Universitate10!"')
+@when('I confirm the password "{password}"')
 def step_impl(context, password):
     context.create_account.the_password_is_inserted(password)
 
