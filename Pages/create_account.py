@@ -1,11 +1,11 @@
 import logging
 
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
+
 
 from base_page import Base_page
 
 class Create_account(Base_page):
+
 
     def click_create_an_account_option(self):
         try:
@@ -29,6 +29,7 @@ class Create_account(Base_page):
             logging.info('The last name is inserted')
         except Exception as t:
             logging.error(f'An error occurred while using the last name : {str(t)}')
+
 
 
 
