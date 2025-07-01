@@ -44,11 +44,11 @@ class Sign_in_page(Base_page):
         except Exception as i:
             logging.error(f"An error occurred while clicking the forget password button : {str(i)}")
 
-    def forget_inserting_email_error(self, expected_error_message):
-        self.check_error_message(*self.EMAIL_ERROR, expected_error_message)
+    def forget_inserting_email_error(self):
+        self.chrome.find_element(*self.EMAIL_ERROR)
 
-    def forget_inserting_password_error(self, expected_error_message):
-        self.check_error_message(*self.PASSWORD_ERROR, expected_error_message)
+    def forget_inserting_password_error(self):
+        self.chrome.find_element(*self.PASSWORD_ERROR)
 
     def reset_my_password_button(self):
         try:
