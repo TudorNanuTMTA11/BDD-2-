@@ -5,6 +5,7 @@ from Pages.create_account import Create_account
 from Pages.home_page import Home_page
 from Pages.sign_in_page import Sign_in_page
 from Pages.checkout import Checkout
+from Pages.circe_hooded_ice import Circe_Hooded_Ice
 
 def before_all(context):
     context.browser = Browser()
@@ -15,6 +16,7 @@ def before_all(context):
     context.sign_in_page = Sign_in_page()
     context.what_is_new = What_is_new()
     context.checkout = Checkout()
+    context.circe_hooded_ice = Circe_Hooded_Ice()
 
 def after_all(context):
     context.browser.close_browser()
