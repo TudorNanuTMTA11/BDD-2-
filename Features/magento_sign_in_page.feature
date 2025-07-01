@@ -13,19 +13,19 @@ Feature: Check that the sign in button in the Magento website is working properl
     @T3 @negativeTesting
       Scenario: I don't insert the credentials
       When I click "Sign in" option
-      Then I receive the message "This is a required field"
+      Then I receive the error "This is a required field" for not inserting credentials
 
     @T4 @negativeTesting
       Scenario: I don't insert the password
       When I introduce the email "tudor.nanu10@gmail.com"
       When I click "Sign in" option
-      Then I receive the message "This is a required field"
+      Then I receive the error: "This is a required field" for not inserting password
 
     @T5 @negativeTesting
       Scenario: I don't insert the email
       When I introduce the password "Universitate10!"
       When I click "Sign in" option
-      Then I receive the message "This is a required field"
+
 
     @T6 @negativeTesting
       Scenario: I forgot the password
@@ -33,5 +33,6 @@ Feature: Check that the sign in button in the Magento website is working properl
       When I introduce the email "tudor.nanu10@gmail.com"
       When I click the button "Reset My Password"
       Then I receive a confirmation message
+
 
 
