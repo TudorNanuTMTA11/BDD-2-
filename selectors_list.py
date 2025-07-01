@@ -33,3 +33,8 @@ class Selectors_List:
     NEXT_BTN = (By.XPATH, '//button[@class = "button action continue primary"]')
     PLACE_ORDER_BTN = (By.XPATH, '//button[@title= "Place Order"]')
     CONTINUE_SHOPPING_BTN = (By.XPATH, '//a[@class = "action primary continue" and @href= "https://magento.softwaretestingboard.com/"]')
+    WOMEN = (By.XPATH, '//span ["Women"]//span')
+    TOPS = (By.XPATH, '//span ["Tops"]//span')
+    HOODIES_SWEATSHIRTS = (By.XPATH, '//span ["Hoodies & Sweatshirts"]//span')
+    SIZE = (By.XPATH,'//div[@class = "swatch-option text " and @tabindex = "-1" and @option-type = "0" and @option-id = "166" and @option-label = "XS"]')
+    COLOR = (By.XPATH, '//div[@class= "swatch-option color" and @id = "option-label-color-93-item-52" and @aria-label = "Gray" and @option-id= "52"]')
