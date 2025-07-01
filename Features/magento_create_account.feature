@@ -4,6 +4,7 @@ Feature: Check that the create account button in the Magento website is working 
 
     @T1 @positiveTesting
       Scenario: I want to create my account
+      When I click "Consent" on incognito window
       When I click "Create an Account" option
       When I introduce the first name "Tudor"
       When I introduce the last name "Nanu"
