@@ -34,5 +34,13 @@ Feature: Check that the sign in button in the Magento website is working properl
       When I click the button "Reset My Password"
       Then I receive a confirmation message
 
-
-
+    @T7 @negativeTesting
+      Scenario Outline: Trying to sign in with invalid password
+      When I enter email "<email>"
+      When I enter password "<password>"
+      When I click the "Sign in" button
+      Then I receive "invalid_password" error "<error_message>"
+      Examples:
+        | email |password|error_message|
+        |tudor.nanu10@gmail.com|Universitate!|The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later|
+        |tudor.nanu10@gmail.com|Universitate10|The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later                                                                                                         |
