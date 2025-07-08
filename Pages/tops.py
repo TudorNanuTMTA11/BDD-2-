@@ -9,10 +9,10 @@ class Tops(Base_page):
                                       f"Actual current_url {page_url}")  # de verificare de tip assert"  # am definit o variabila
 
     def sort_products_desc_direction(self):
-        self.chrome.find_element(*self.SET_DESCENDING_DIRECTION)
+        self.chrome.find_elements(*self.SET_DESCENDING_DIRECTION)
 
     def sort_products_asc_direction(self):
-        self.chrome.find_element(*self.SET_ASCENDING_DIRECTION)
+        self.chrome.find_elements(*self.SET_ASCENDING_DIRECTION)
 
     def sort_products_position_product_name_price(self):
-        self.chrome.find_element(*self.SORTER)
+        self.chrome.find_elements(*self.SORTER)
