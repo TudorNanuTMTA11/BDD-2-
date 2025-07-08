@@ -40,4 +40,5 @@ class Selectors_List:
     SET_DESCENDING_DIRECTION = (By.XPATH, '//a[@title= "Set Descending Direction"]')
     SET_ASCENDING_DIRECTION = (By.XPATH, '//a[@title= "Set Ascending Direction"]')
     SORTER = (By.XPATH, '//select[@id= "sorter"]')
-
+    THIS_IS_A_REQUIRED_FIELD = (By.ID, 'customer-email-error')
+    ERROR_VALIDATION_MESSAGE = (By.XPATH, '//span[@data-bind= "text: errorValidationMessage()"]')
