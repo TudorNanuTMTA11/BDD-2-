@@ -1,3 +1,4 @@
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -10,6 +11,7 @@ import logging
 
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.core import driver
 
 from base_page import Base_page
 
@@ -45,10 +47,10 @@ class Sign_in_page(Base_page):
             logging.error(f"An error occurred while clicking the forget password button : {str(i)}")
 
     def forget_inserting_email_error(self):
-        self.chrome.find_element(*self.EMAIL_ERROR)
+        self.chrome.find_elements(*self.EMAIL_ERROR)
 
     def forget_inserting_password_error(self):
-        self.chrome.find_element(*self.PASSWORD_ERROR)
+        self.chrome.find_elements(*self.PASSWORD_ERROR)
 
     def reset_my_password_button(self):
         try:
@@ -69,7 +71,8 @@ class Sign_in_page(Base_page):
             logging.error(f"An error occurred while displaying the confirmation message"
                           f" website : {str(l)}")
 
-
+    def error_message_invalid_password_is_displayed(self, expected_error_message):
+        self.check_error_message(*self.PASSWORD, expected_error_message)
 
 
 
