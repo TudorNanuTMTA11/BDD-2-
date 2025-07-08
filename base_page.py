@@ -23,4 +23,9 @@ class Base_page(Browser, Selectors_List):
         except Exception as t:
             logging.error(f'An error occurred while using the last name : {str(t)}')
 
+    def check_error_message(self, by, selector, expected_error_message):
+        # metoda presence_of_element_located primeste doi parametrii: tipul selectorului si valoarea selectorului
 
+            error_message_web_element = WebDriverWait(self.chrome, 20).until(EC.presence_of_element_located((by, selector)))
+            expected_error_message = error_message_web_element.text
+            assert expected_error_message == expected_error_message, f"Error, the message is incorrect. Expected: {expected_error_message}, actual: {expected_error_message}"
