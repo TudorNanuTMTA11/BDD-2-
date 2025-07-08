@@ -51,3 +51,11 @@ def step_impl(context):
 @then('I am redirected to the home page')
 def step_impl(context):
     context.home_page.open_home_page()
+
+@then('It appears the message "This is a required field"')
+def step_impl(context):
+    context.checkout.this_is_a_required_field()
+
+@then('It appears the message "The shipping method is missing. Select the shipping method and try again."')
+def step_impl(context):
+    context.checkout.error_validation_message()
