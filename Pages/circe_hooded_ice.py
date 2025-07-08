@@ -2,13 +2,13 @@ from time import sleep
 
 from base_page import Base_page
 
-sleep(10)
+
 class Circe_Hooded_Ice(Base_page):
     def size_XS_circe_hooded_ice(self):
-        self.chrome.find_element(*self.SIZE)
+        self.chrome.find_elements(*self.SIZE)
 
     def color_gray_circe_hooded_ice(self):
-        self.chrome.find_element(*self.COLOR)
+        self.chrome.find_elements(*self.COLOR)
 
     def women_option(self):
         self.chrome.find_element(*self.WOMEN)
