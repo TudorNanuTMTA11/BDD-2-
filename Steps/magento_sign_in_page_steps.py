@@ -20,7 +20,10 @@ def step_impl(context):
 def step_impl(context):
     context.sign_in_page.forget_inserting_password_error()
 
-
+@then('I receive "{error_type}" error "{error_message}"')
+def step_impl(context, error_type, error_message):
+    if error_type == "invalid_password":
+        context.sign_in_page.error_message_invalid_password_is_displayed(error_message)
 @when('I click the button "Forgot your Password?"')
 def step_impl(context):
     context.sign_in_page.forget_password_button()
@@ -33,5 +36,16 @@ def step_impl(context):
 def step_impl(context):
     context.sign_in_page.confirmation_message()
 
+@when('I enter password "{password}"')
+def step_impl(context,password):
+    context.base_page.the_password_is_inserted(password)
+
+@when('I click sign in button')
+def step_impl(context):
+    context.sign_in_page.sign_in_button()
+
+@when('I enter email "{email}"')
+def step_impl(context, email):
+    context.base_page.the_email_is_inserted(email)
 
 
