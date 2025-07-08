@@ -97,4 +97,8 @@ class Checkout(Base_page):
         except Exception as i:
             logging.error(f"An error occurred while clicking the continue shopping button : { str(i)}")
 
+    def this_is_a_required_field(self):
+        self.chrome.find_elements(*self.THIS_IS_A_REQUIRED_FIELD)
 
+    def error_validation_message(self):
+        self.chrome.find_elements(*self.ERROR_VALIDATION_MESSAGE)
