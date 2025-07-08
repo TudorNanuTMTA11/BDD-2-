@@ -8,9 +8,6 @@ def step_impl(context):
 def step_impl(context):
     context.home_page.search_entire_here()
 
-@when('the options for the product searched appear')
-def step_impl(context):
-    context.home_page.wayfarer_messenger_bag_search()
 
 
 @when('I am redirected to the catalog page')
