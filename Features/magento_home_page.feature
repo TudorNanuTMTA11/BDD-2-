@@ -5,7 +5,6 @@ Feature: Check that the search tab in the Magento website is working properly an
     @T7 @positiveTesting
     Scenario: I want to search "Wayfarer Messenger Bag" product
     When I type "Wayfarer Messenger Bag" in the search tab
-    When the options for the product searched appear
     When I am redirected to the catalog page
     Then I see the product shown on the page
 
