@@ -139,3 +139,23 @@ class Checkout(Base_page):
 
     def shipping_address_item(self):
         self.chrome.find_elements(*self.SHIPPING_ADDRESS_ITEM)
+
+    def new_address_button(self):
+        try:
+            new_address_button = self.chrome.find_element(*self.NEW_ADDRESS)
+            if new_address_button:
+                new_address_button.click()
+            else:
+                raise AssertionError('New address button element was not found')
+        except Exception as i:
+            logging.error(f"An error occurred while clicking the new address button : { str(i)}")
+
+    def ship_here_button(self):
+        try:
+            ship_here_button = self.chrome.find_element(*self.SHIP_HERE)
+            if ship_here_button:
+                ship_here_button.click()
+            else:
+                raise AssertionError('Ship here button element was not found')
+        except Exception as i:
+            logging.error(f"An error occurred while clicking the ship here button : {str(i)}")

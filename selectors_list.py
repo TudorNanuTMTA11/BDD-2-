@@ -60,5 +60,8 @@ class Selectors_List:
     ITEM_10 = (By.XPATH, '(//img[@class= "product-image-photo"])[10]')
     ITEM_11 = (By.XPATH, '(//img[@class= "product-image-photo"])[11]')
     WAYFARER_KEYWORD = (By.XPATH, '//span[@class= "base" and @data-ui-id= "page-title-wrapper"]')
-
+    NEW_ADDRESS = (By.XPATH, '//button[@class = "action action-show-popup"]')
+    SHIP_HERE = (By.XPATH, '//button[@class= "action primary action-save-address"]')
+    GRID = (By.XPATH, '//a[@class= "modes-mode mode-grid"]')
+    LIST = (By.XPATH, '//a[@class= "modes-mode mode-list"]')
 

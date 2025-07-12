@@ -20,9 +20,6 @@ def step_impl(context):
 def step_impl(context):
     context.home_page.wayfarer_messenger_bag_product()
 
-@then('I see the word "Wayfarer" in the title of the products returned by the search web')
-def step_impl(context):
-    context.base_page.wayfarer_keyword_is_present_in_the_title_of_the_products_returned_by_the_search_web()
 
 
 

@@ -83,3 +83,23 @@ def step_impl(context):
 @when('I see the shipping address saved')
 def step_impl(context):
     context.checkout.shipping_address_item()
+
+@when('I click on New Address button')
+def step_impl(context):
+    context.checkout.new_address_button()
+
+@when('I introduce the company "{new_company}')
+def step_impl(context,new_company):
+    context.checkout.the_company_is_inserted(new_company)
+
+@when('I click on Ship Here button')
+def step_impl(context):
+    context.checkout.ship_here_button()
+
+@when('a new shipping address appears')
+def step_impl(context):
+    context.checkout.shipping_address_item()
+
+
+
+
