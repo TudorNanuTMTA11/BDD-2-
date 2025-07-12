@@ -7,6 +7,7 @@ from Pages.what_is_new import What_is_new
 from Pages.checkout import Checkout
 from Pages.circe_hooded_ice import Circe_Hooded_Ice
 from Pages.tops import Tops
+from Pages.sign_in_page import Search
 
 def before_all(context):
     context.browser = Browser()
@@ -19,6 +20,7 @@ def before_all(context):
     context.checkout = Checkout()
     context.circe_hooded_ice = Circe_Hooded_Ice()
     context.tops = Tops()
+    context.search = Search()
 
 def after_all(context):
     context.browser.close_browser()
