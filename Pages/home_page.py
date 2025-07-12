@@ -41,7 +41,7 @@ class Home_page(Base_page): #am construit o clasa
         self.chrome.find_element(*self.SEARCH_ENTIRE_HERE)
 
     def wayfarer_messenger_bag_search(self):
-        self.chrome.find_element(*self.WAYFARER_MESSENGER_BAG_SEARCH)
+         self.chrome.find_element(*self.SEARCH)
 
     def wayfarer_messenger_bag_product(self):
         self.chrome.find_element(*self.WAYFARER_MESSENGER_BAG_PRODUCT)
@@ -50,3 +50,6 @@ class Home_page(Base_page): #am construit o clasa
         page_url = "https://magento.softwaretestingboard.com/checkout/#shipping"  # am definit o variabila
         assert page_url == page_url, (f"An error occurred. Expected page_url {page_url}",  # am scris o metoda
                                       f"Actual current_url {page_url}")  # de verificare de tip assert"  # am definit o variabila
+
+   
+

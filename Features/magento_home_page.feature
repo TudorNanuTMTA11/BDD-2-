@@ -8,4 +8,3 @@ Feature: Check that the search tab in the Magento website is working properly an
     When I am redirected to the catalog page
     Then I see the product shown on the page
 
-

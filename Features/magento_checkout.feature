@@ -25,3 +25,17 @@ Feature: Check that the Checkout page in the Magento website is working properly
       Scenario: I don't select the shipping method
       When I click next button
       Then it appears the message "The shipping method is missing. Select the shipping method and try again."
+
+    @T15 @positiveTesting
+      Scenario: I want to purchase a product by being signed in into my account
+      When I am on checkout page
+      When I click the sign in option
+      When I insert the email "tudor.nanu10@gmail.com"
+      When I insert the password "Universitate10!"
+      When I click the sign in button
+      When I see the shipping address saved
+      When I select the price
+      When I click Next button
+      When I click Place Order button
+      When I click Continue Shopping button
+      Then I am redirected to the home page

@@ -102,3 +102,40 @@ class Checkout(Base_page):
 
     def error_validation_message(self):
         self.chrome.find_elements(*self.ERROR_VALIDATION_MESSAGE)
+
+    def sign_in_option_2(self):
+        try:
+            sign_in_option_2 = self.chrome.find_element(*self.SIGN_IN_OPT_2)
+            if sign_in_option_2:
+                sign_in_option_2.click()
+            else:
+                raise AssertionError('Sign in option element was not found')
+        except Exception as i:
+            logging.error(f"An error occurred while clicking the sign in option : { str(i)}")
+
+    def sign_in_button_2(self):
+        try:
+            sign_in_button_2 = self.chrome.find_element(*self.SIGN_IN_BTN_2)
+            if sign_in_button_2:
+                sign_in_button_2.click()
+            else:
+                raise AssertionError('Sign in option element was not found')
+        except Exception as i:
+            logging.error(f"An error occurred while clicking the sign in option : { str(i)}")
+
+    def the_email_is_inserted_2(self,email):
+        try:
+            self.chrome.find_element(*self.LOGIN_EMAIL).send_keys(email)
+            logging.info('The email address is inserted')
+        except Exception as t:
+            logging.error(f'An error occurred while using the email : {str(t)}')
+
+    def the_password_is_inserted_2(self,password):
+        try:
+            self.chrome.find_element(*self.LOGIN_PASSWORD).send_keys(password)
+            logging.info('The password is inserted')
+        except Exception as t:
+            logging.error(f'An error occurred while using the last name : {str(t)}')
+
+    def shipping_address_item(self):
+        self.chrome.find_elements(*self.SHIPPING_ADDRESS_ITEM)

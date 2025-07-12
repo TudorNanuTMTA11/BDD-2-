@@ -59,3 +59,27 @@ def step_impl(context):
 @then('It appears the message "The shipping method is missing. Select the shipping method and try again."')
 def step_impl(context):
     context.checkout.error_validation_message()
+
+@when('I am on checkout page')
+def step_impl(context):
+    context.home_page.checkout_page()
+
+@when('I click the sign in option')
+def step_impl(context):
+    context.checkout.sign_in_option_2()
+
+@when('I insert the email "{email}"')
+def step_impl(context,email):
+    context.checkout.the_email_is_inserted_2(email)
+
+@when('I insert the password "{password}"')
+def step_impl(context,password):
+    context.checkout.the_password_is_inserted_2(password)
+
+@when('I click the sign in button')
+def step_impl(context):
+    context.checkout.sign_in_button_2()
+
+@when('I see the shipping address saved')
+def step_impl(context):
+    context.checkout.shipping_address_item()
