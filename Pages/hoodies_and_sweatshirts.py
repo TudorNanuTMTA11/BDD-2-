@@ -22,5 +22,10 @@ class Hoodies_and_sweatshirts(Base_page):
         except Exception as i:
             logging.error(f"An error occurred while clicking the list button : { str(i)}")
 
+    def list_page(self):
+        page_url = "https://magento.softwaretestingboard.com/women/tops-women/hoodies-and-sweatshirts-women.html?product_list_mode=list" # am definit o variabila
+        assert page_url == page_url, (f"An error occurred. Expected page_url {page_url}", #am scris o metoda
+                                                     f"Actual current_url {page_url}") #de verificare de tip assert"  # am definit o variabila
+
 
 

@@ -1,4 +1,9 @@
- @T16 @failureTesting
+ Feature: Check that the Search page in the Magento website is working properly and I can search the products I want
+  in the page
+  Background:
+    Given I am on the Magento homepage and I want to access the products
+
+@T16 @failureTesting
       Scenario: I want to check that the key word I typed in search tab for a product is in the title of the products returned by the search web,
       if not the test should be failed
       When I type "Wayfarer Messenger Bag" in the search tab

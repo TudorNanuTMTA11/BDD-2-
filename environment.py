@@ -9,6 +9,8 @@ from Pages.circe_hooded_ice import Circe_Hooded_Ice
 from Pages.tops import Tops
 from Pages.search import Search
 from Pages.hoodies_and_sweatshirts import Hoodies_and_sweatshirts
+from Pages.sale import Sale
+from Pages.training import Training
 
 def before_all(context):
     context.browser = Browser()
@@ -23,6 +25,8 @@ def before_all(context):
     context.tops = Tops()
     context.search = Search()
     context.hoodies_and_sweatshirts = Hoodies_and_sweatshirts()
+    context.sale = Sale()
+    context.training = Training()
 
 def after_all(context):
     context.browser.close_browser()

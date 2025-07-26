@@ -51,5 +51,35 @@ class Home_page(Base_page): #am construit o clasa
         assert page_url == page_url, (f"An error occurred. Expected page_url {page_url}",  # am scris o metoda
                                       f"Actual current_url {page_url}")  # de verificare de tip assert"  # am definit o variabila
 
+
+    def training_page(self):
+        page_url = "https://magento.softwaretestingboard.com/training.html"  # am definit o variabila
+        assert page_url == page_url, (f"An error occurred. Expected page_url {page_url}",  # am scris o metoda
+                                  f"Actual current_url {page_url}")  # de verificare de tip assert"  # am definit o variabila
+
+
+    def sale_page(self):
+        page_url = "https://magento.softwaretestingboard.com/sale.html"  # am definit o variabila
+        assert page_url == page_url, (f"An error occurred. Expected page_url {page_url}",  # am scris o metoda
+                                  f"Actual current_url {page_url}")  # de verificare de tip assert"  # am definit o variabila
+
+    def sale_promotions_page(self):
+        page_url = "https://magento.softwaretestingboard.com/promotions/women-sale.html"  # am definit o variabila
+        assert page_url == page_url, (f"An error occurred. Expected page_url {page_url}",  # am scris o metoda
+                                      f"Actual current_url {page_url}")  # de verificare de tip assert"  # am definit o variabila
+
+    def erin_recommends(self):
+        page_url = "https://magento.softwaretestingboard.com/collections/erin-recommends.html"  # am definit o variabila
+        assert page_url == page_url, (f"An error occurred. Expected page_url {page_url}",  # am scris o metoda
+                                      f"Actual current_url {page_url}")  # de verificare de tip assert"  # am definit o variabila
+
+    def video_download_page(self):
+        page_url = "https://magento.softwaretestingboard.com/training/training-video.html"  # am definit o variabila
+        assert page_url == page_url, (f"An error occurred. Expected page_url {page_url}",  # am scris o metoda
+                                      f"Actual current_url {page_url}")  # de verificare de tip assert"  # am definit o variabila
+
+
+
+
    
 
