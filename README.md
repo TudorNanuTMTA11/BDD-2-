@@ -7,7 +7,7 @@
 
  ## Installation
 
-In order <b>to format the test report file<b/>, we need to <b>install behave-html-formatter package</b>. Also, in order <b>to beautify the format option in the run command</b>, we need to <b>install the .ini package</b> and <b>create a file</b> called <b>behave.ini</b>. The content of the file must be the following:
+In order <b>to format the test report file<b/>, we need to <b>install behave-html-formatter package</b>. Also, in order <b>to beautify the format option in the run command</b>, we need to <b>install the .ini package</b> and <b>create a file</b> called <b>behave.ini</b>. <b>The content of the file must be the following: </b>
 
  Provides ".ini" files support. The following features are available:
  <ul>
