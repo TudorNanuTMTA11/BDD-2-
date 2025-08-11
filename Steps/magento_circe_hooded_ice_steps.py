@@ -2,9 +2,6 @@ from behave import *
 
 
 
-@given('I am on the Magento homepage and I want to purchase a product with a particular size and color I want')
-def step_impl(context):
-    context.circe_hooded_ice.circe_hooded_ice_page()
 
 @when('I click on Women option')
 def step_impl(context):

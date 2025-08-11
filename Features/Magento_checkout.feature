@@ -1,8 +1,13 @@
 Feature: Check that the Checkout page in the Magento website is working properly and I can complete the purchasing process
   Background:
-    Given I am on the Magento homepage and I want to complete the purchase product process
+    Given I am on the Magento homepage
     @T10 @positiveTesting
       Scenario: I want to complete the details of the checkout
+      When I click Add to Cart button on "Radiant Tee" product
+      When I select XS size
+      When I select blue colour
+      When I click on action showcart icon
+      When I click on Proceed to Checkout button
       When I introduce the company "SC DEKAEM CREWING SRL"
       When I introduce the street address "Str.Dr.C.Hepites 11 bl.C1 sc.1 et.1 ap.4"
       When I introduce the city "Braila"
@@ -14,7 +19,7 @@ Feature: Check that the Checkout page in the Magento website is working properly
       When I click Next button
       When I click Place Order button
       When I click Continue Shopping button
-      Then I am redirected to the home page
+      Then I am redirected to the home page "https://magento.softwaretestingboard.com/"
 
     @T13 @negativeTesting
       Scenario: I don't insert the email address

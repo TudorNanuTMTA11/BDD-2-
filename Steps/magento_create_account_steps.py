@@ -1,8 +1,6 @@
 from behave import *
 
-@given('I am on the Magento homepage and I want to initiate the create account process')
-def step_impl(context):
-    context.home_page.open_home_page()
+
 
 @when('I click "Consent" on incognito window')
 def step_impl(context):

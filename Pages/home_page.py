@@ -3,8 +3,6 @@ import logging
 from base_page import Base_page
 
 class Home_page(Base_page): #am construit o clasa
-    def open_home_page(self): #am scris o metoda
-        self.chrome.get("https://magento.softwaretestingboard.com/") #am creat o comanda care sa deschida automat un site
 
     def click_consent_button(self):
         try:

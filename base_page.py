@@ -30,3 +30,7 @@ class Base_page(Browser, Selectors_List):
             expected_error_message = error_message_web_element.text
             assert expected_error_message == expected_error_message, f"Error, the message is incorrect. Expected: {expected_error_message}, actual: {expected_error_message}"
 
+    def check_page_url(self,by, selector, expected_url):
+        page_url_element = WebDriverWait(self.chrome, 20).until(EC.presence_of_element_located((by, selector)))
+        expected_page_url = page_url_element.text
+        assert expected_page_url == expected_url, f"Error, the message is incorrect. Expected: {expected_page_url}, actual : {expected_url}"

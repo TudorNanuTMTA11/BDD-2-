@@ -60,4 +60,5 @@ class Selectors_List:
     MESSAGE_INFO = (By.XPATH, '//div[@class= "message info empty"]')
     VIDEO_DOWNLOAD_OPTION = (By.XPATH,'//a[@href = "https://magento.softwaretestingboard.com/training/training-video.html"]')
     PRODUCT_ITEM_LINK = (By.XPATH, '//a[@class="product-item-link"]')
+    ADD_TO_CART_RADIANT_TEE = (By.XPATH, '(//button[@title= "Add to Cart"])[1]')
 

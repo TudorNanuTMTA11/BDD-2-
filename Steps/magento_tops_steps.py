@@ -1,8 +1,6 @@
 from behave import *
 
-@given('I am on the Magento homepage and I want to sort a product with a particular criteria and direction I want')
-def step_impl(context):
-    context.circe_hooded_ice.circe_hooded_ice_page()
+
 
 @when('I click on Price option')
 def step_impl(context):

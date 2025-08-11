@@ -1,8 +1,6 @@
 from behave import *
 
-@given('I am on the Magento homepage and I want to initiate the searching products process')
-def step_impl(context):
-    context.home_page.open_home_page()
+
 
 @when('I type "Wayfarer Messenger Bag" in the search tab')
 def step_impl(context):

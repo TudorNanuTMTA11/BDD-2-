@@ -1,6 +1,6 @@
 from behave import *
 
-@given('I am on the Magento homepage and I want to complete the purchase product process')
+@given('I am on the Magento homepage')
 def step_impl(context):
     context.home_page.checkout_page()
 
@@ -48,9 +48,9 @@ def step_impl(context):
 def step_impl(context):
     context.checkout.continue_shopping_button()
 
-@then('I am redirected to the home page')
-def step_impl(context):
-    context.home_page.open_home_page()
+@then('I am redirected to the home page {page_url}')
+def step_impl(context,page_url):
+    context.base_page.check_page_url(page_url)
 
 @then('It appears the message "This is a required field"')
 def step_impl(context):
@@ -99,6 +99,22 @@ def step_impl(context):
 @when('a new shipping address appears')
 def step_impl(context):
     context.checkout.shipping_address_item()
+
+
+@when('I click Add to Cart button on {product_name} product')
+def step_impl(context,product_name):
+    context.checkout.add_to_cart_radiant_tee_button(product_name)
+
+@when('I select XS size')
+def step_impl(context):
+    context.checkout.size_XS_radiant_tee()
+
+@when('I select blue colour')
+def step_impl(context):
+    context.checkout.color_blue_radiant_tee()
+
+
+
 
 
 

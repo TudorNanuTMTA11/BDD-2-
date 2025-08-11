@@ -1,8 +1,6 @@
 from behave import *
 
-@given('I am on the Magento homepage and I want to complete the arrange the products in the page')
-def step_impl(context):
-    context.home_page.open_home_page()
+
 
 @when('I click the list button')
 def step_impl(context):
